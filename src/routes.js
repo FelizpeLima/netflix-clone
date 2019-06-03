@@ -2,8 +2,8 @@ const express = require('express')
 
 const routes = express.Router()
 
-routes.get('/', (req, res) => {
-  return res.send('Netflix')
-})
+const IndexController = require('./app/controllers/IndexController')
+
+routes.get('/index', IndexController.create)
 
 module.exports = routes
